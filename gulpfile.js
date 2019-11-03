@@ -14,7 +14,7 @@ gulp.task('copy-html', function () {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', gulp.series(gulp.parallel('copy-html'), function () {
+gulp.task('build', gulp.series(gulp.parallel('copy-html'), function () {
     // 将把所有模块捆绑成一个JavaScript文件
     return browserify({
         basedir: '.',
